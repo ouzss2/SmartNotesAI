@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct SmartNotesAIAppApp: App {
+    @StateObject private var authViewModel = AuthViewModel()
+        @StateObject private var notesViewModel = NotesViewModel()
+    init() {
+           FirebaseApp.configure() 
+       }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(authViewModel)
+                .environmentObject(notesViewModel)
+                
         }
     }
 }
