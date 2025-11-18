@@ -11,7 +11,7 @@ class GeminiService: ObservableObject {
     static let shared = GeminiService()
     
     
-    private let apiKey = "AIzaSyDAy6YW-7yOG7q6Obgt8lZpMN13wlOqoVg"
+    private let apiKey = "Api-Key"
     private let baseURL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
     
     private init() {}
